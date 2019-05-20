@@ -1,6 +1,6 @@
 {
   "name": "postcss-bootstrap-wxss",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "PostCSS plugin for convert bootstrap css file to wxss",
   "keywords": [
     "postcss",
@@ -11,7 +11,10 @@
   ],
   "author": "Tom.Li <wolf1030@163.com>",
   "license": "MIT",
-  "repository": "git@github.com:tomli/postcss-bootstrap-wxss.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tomli/postcss-bootstrap-wxss.git"
+  },
   "homepage": "https://github.com/tomli/postcss-bootstrap-wxss",
   "dependencies": {
     "postcss": "^6.0.8",
@@ -28,5 +31,9 @@
     "env": {
       "jest": true
     }
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/tomli/postcss-bootstrap-wxss/issues"
+  },
+  "main": "index.js"
 }
