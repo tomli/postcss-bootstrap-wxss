@@ -33,6 +33,14 @@ module.exports = postcss.plugin('postcss-bootstrap-wxss', options => {
         })
       }
 
+      if(rule.selector === 'textarea.form-control'){
+        rule.walkDecls('height', decl => {
+          const autowidth = postcss.decl({ prop: 'width', value: 'auto' });
+          decl.parent.append(autowidth);
+          decl.remove();
+        });
+      }
+
       if(rule.selector === '.form-control'){
         rule.walkDecls('width', decl => {
           if(decl.value === '100%'){
@@ -58,41 +66,12 @@ module.exports = postcss.plugin('postcss-bootstrap-wxss', options => {
             safeColSelectors.push(ruleSelector);
           }
         });
-        // var safeColSelectors = [];
-        // colSelectors.forEach(function (colSelector) {
-        //   safeColSelectors.push(parentSelector+' > '+colSelector);
-        // });
         rule.selector =  safeColSelectors.join(', ');
       }
 
       rule.selector = rule.selector.replace(/.~/ig, str => {
         return '+';
       });
-
-      /*
-
-            for (var k in replaceCharInSelector) {
-              if (replaceCharInSelector.hasOwnProperty(k)) {
-              }
-            }
-
-            if(hasInvaildChar(rule.selector)) {
-              rule.selector = selectorParser(function (selectors) {
-                selectors.each(function (selector) {
-                  selector.each(function (n) {
-                    // 转换 tag 选择器
-                    if (n.type === 'tag') {
-                      const k = n.value;
-                    }
-                    // 清理不支持的选择器
-                    if ([].includes(n.value)) {
-                      // return n.value = 'view';
-                      return rule.remove();
-                    }
-                  })
-                })
-              }).process(selector).result;
-            }*/
     });
 
     root.walkDecls('-webkit-appearance', decl => {
