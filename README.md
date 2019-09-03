@@ -7,7 +7,7 @@
 
   
 ## 备注
-需要和 [postcss-mpvue-wxss](URL 'https://github.com/mpvue/postcss-mpvue-wxss') 一起使用
+需要和 [postcss-mpvue-wxss](https://github.com/mpvue/postcss-mpvue-wxss) 一起使用
 
 
 ##用法
@@ -17,5 +17,5 @@
   ``` 
 
 
-参考[wepy-plugin-bootstrap](URL 'https://github.com/tomli/wepy-plugin-bootstrap') 以及 [wepy-bootstrap-demo](URL 'https://github.com/tomli/wepy-bootstrap-demo.git')
+参考[wepy-plugin-bootstrap](https://github.com/tomli/wepy-plugin-bootstrap) 以及 [wepy-bootstrap-demo](https://github.com/tomli/wepy-bootstrap-demo.git)
 
